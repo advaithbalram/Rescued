@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:rescue2/core/app_export.dart';
+import 'package:rescue2/screens/android_large_one_screen.dart';
 import 'package:rescue2/widgets/app_bar/appbar_leading_image.dart';
 import 'package:rescue2/widgets/app_bar/custom_app_bar.dart';
 import 'package:rescue2/widgets/custom_elevated_button.dart';
@@ -159,6 +160,10 @@ class LoginPageOneScreen extends StatelessWidget {
       height: 55.v,
       text: "FINISH",
       style: CustomButtonStyles.outlineBlackTL24,
+      onPressed: () {
+        Navigator.push(context,
+            MaterialPageRoute(builder: ((context) => AndroidLargeOneScreen())));
+      },
     );
   }
 

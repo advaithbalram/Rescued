@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:rescue2/core/app_export.dart';
+import 'package:rescue2/screens/login_page_one_screen.dart';
 import 'package:rescue2/widgets/app_bar/appbar_leading_image.dart';
 import 'package:rescue2/widgets/app_bar/custom_app_bar.dart';
 import 'package:rescue2/widgets/custom_elevated_button.dart';
@@ -14,6 +15,8 @@ class LoginPageScreen extends StatelessWidget {
   TextEditingController editText2Controller = TextEditingController();
 
   TextEditingController editText3Controller = TextEditingController();
+
+  TextEditingController editText4Controller = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -86,15 +89,7 @@ class LoginPageScreen extends StatelessWidget {
                                     padding: EdgeInsets.only(left: 10.h),
                                     child: Text("Gender ",
                                         style: theme.textTheme.titleLarge))),
-                            SizedBox(height: 7.v),
-                            Container(
-                                height: 57.v,
-                                width: 316.h,
-                                decoration: BoxDecoration(
-                                    color: theme.colorScheme.primaryContainer,
-                                    borderRadius: BorderRadius.circular(28.h),
-                                    border: Border.all(
-                                        color: appTheme.black900, width: 1.h)))
+                            _buildEditText4(context),
                           ]))
                     ]))),
             bottomNavigationBar: _buildNextButton(context)));
@@ -105,19 +100,19 @@ class LoginPageScreen extends StatelessWidget {
     return Align(
         alignment: Alignment.centerLeft,
         child: Padding(
-            padding: EdgeInsets.only(right: 62.h),
+            padding: EdgeInsets.only(right: 5.h),
             child: Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
               CustomAppBar(
-                  height: 75.v,
+                  height: 10.v,
                   leadingWidth: double.maxFinite,
                   leading: AppbarLeadingImage(
                       imagePath: ImageConstant.imgArrowLeft,
-                      margin: EdgeInsets.only(right: 323.h),
+                      margin: EdgeInsets.only(right: 10.h),
                       onTap: () {
                         onTapArrowLeft(context);
                       })),
               Padding(
-                  padding: EdgeInsets.only(top: 36.v),
+                  padding: EdgeInsets.only(top: 16.v),
                   child: Text("Create Profile",
                       style: theme.textTheme.headlineLarge))
             ])));
@@ -140,11 +135,21 @@ class LoginPageScreen extends StatelessWidget {
   }
 
   /// Section Widget
+  Widget _buildEditText4(BuildContext context) {
+    return CustomTextFormField(
+        controller: editText3Controller, textInputAction: TextInputAction.done);
+  }
+
+  /// Section Widget
   Widget _buildNextButton(BuildContext context) {
     return CustomElevatedButton(
       height: 55.v,
       text: "NEXT",
       style: CustomButtonStyles.outlineBlackTL24,
+      onPressed: () {
+        Navigator.push(context,
+            MaterialPageRoute(builder: ((context) => LoginPageOneScreen())));
+      },
     );
   }
 

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:rescue2/core/app_export.dart';
+import 'package:rescue2/screens/android_large_four_screen.dart';
+import 'package:rescue2/screens/android_large_three_screen.dart';
 import 'package:rescue2/widgets/app_bar/appbar_leading_image.dart';
 import 'package:rescue2/widgets/app_bar/appbar_title.dart';
 import 'package:rescue2/widgets/app_bar/appbar_trailing_image.dart';
@@ -56,6 +58,12 @@ class AndroidLargeOneScreen extends StatelessWidget {
     return CustomAppBar(
       leadingWidth: 37.h,
       leading: AppbarLeadingImage(
+        onTap: () {
+          Navigator.push(
+              context,
+              MaterialPageRoute(
+                  builder: ((context) => AndroidLargeFourScreen())));
+        },
         imagePath: ImageConstant.imgMenu,
         margin: EdgeInsets.only(
           left: 13.h,
@@ -158,38 +166,40 @@ class AndroidLargeOneScreen extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox(height: 68.v),
-            Padding(
-              padding: EdgeInsets.only(left: 6.h),
-              child: Row(
-                children: [
-                  Padding(
-                    padding: EdgeInsets.symmetric(vertical: 3.v),
-                    child: Text(
-                      "ACCEPT".toUpperCase(),
+            Wrap(children: [
+              TextButton(
+                  onPressed: (() {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: ((context) => AndroidLargeThreeScreen())));
+                  }),
+                  child: Text.rich(TextSpan(children: [
+                    TextSpan(
+                      text: "ACCEPT".toUpperCase(),
                       style: CustomTextStyles.titleSmallGreenA700,
                     ),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.only(
-                      left: 14.h,
-                      top: 3.v,
-                      bottom: 3.v,
-                    ),
-                    child: Text(
-                      "REJECT".toUpperCase(),
+                  ]))),
+              TextButton(
+                  onPressed: (() {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: ((context) => AndroidLargeThreeScreen())));
+                  }),
+                  child: Text.rich(TextSpan(children: [
+                    TextSpan(
+                      text: "REJECT".toUpperCase(),
                       style: CustomTextStyles.titleSmallErrorContainer,
-                    ),
-                  ),
-                  Spacer(),
-                  CustomImageView(
-                    imagePath: ImageConstant.imgNotificationBlack900,
-                    height: 24.adaptSize,
-                    width: 24.adaptSize,
-                  ),
-                ],
+                    )
+                  ]))),
+              CustomImageView(
+                imagePath: ImageConstant.imgNotificationBlack900,
+                height: 24.adaptSize,
+                width: 24.adaptSize,
+                alignment: Alignment.centerRight,
               ),
-            ),
+            ]),
           ],
         ),
       ),
@@ -232,7 +242,7 @@ class AndroidLargeOneScreen extends StatelessWidget {
               flex: 34,
             ),
             Text(
-              "COmmunity".toUpperCase(),
+              "Community".toUpperCase(),
               style: theme.textTheme.titleSmall,
             ),
           ],

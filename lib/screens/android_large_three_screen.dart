@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:rescue2/core/app_export.dart';
+import 'package:rescue2/screens/android_large_four_screen.dart';
 import 'package:rescue2/widgets/app_bar/appbar_leading_image.dart';
 import 'package:rescue2/widgets/app_bar/appbar_title.dart';
 import 'package:rescue2/widgets/app_bar/appbar_trailing_image.dart';
@@ -56,6 +57,12 @@ class AndroidLargeThreeScreen extends StatelessWidget {
     return CustomAppBar(
       leadingWidth: 37.h,
       leading: AppbarLeadingImage(
+        onTap: () {
+          Navigator.push(
+              context,
+              MaterialPageRoute(
+                  builder: ((context) => AndroidLargeFourScreen())));
+        },
         imagePath: ImageConstant.imgMenu,
         margin: EdgeInsets.only(
           left: 13.h,
@@ -197,7 +204,7 @@ class AndroidLargeThreeScreen extends StatelessWidget {
               flex: 35,
             ),
             Text(
-              "COmmunity".toUpperCase(),
+              "Community".toUpperCase(),
               style: theme.textTheme.titleSmall,
             ),
           ],

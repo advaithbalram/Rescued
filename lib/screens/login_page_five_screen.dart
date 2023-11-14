@@ -100,7 +100,7 @@ class LoginPageFiveScreen extends StatelessWidget {
                           text: "Don't have an account?",
                           style: Theme.of(context).textTheme.bodyMedium),
                       TextSpan(text: " SIGN UP")
-                    ])))
+                    ]))),
               ],
             ),
           ),

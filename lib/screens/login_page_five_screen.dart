@@ -15,7 +15,7 @@ class LoginPageFiveScreen extends StatelessWidget {
 
   TextEditingController passwordController = TextEditingController();
 
-  GlobalKey<FormState> _formKey = GlobalKey<FormState>();
+  final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
 
   @override
   Widget build(BuildContext context) {
@@ -99,7 +99,7 @@ class LoginPageFiveScreen extends StatelessWidget {
                       TextSpan(
                           text: "Don't have an account?",
                           style: Theme.of(context).textTheme.bodyMedium),
-                      TextSpan(text: " SIGN UP")
+                      const TextSpan(text: " SIGN UP")
                     ]))),
               ],
             ),
@@ -111,7 +111,7 @@ class LoginPageFiveScreen extends StatelessWidget {
 
   /// Section Widget
   Widget _buildWelcomeStack(BuildContext context) {
-    return NewWidget();
+    return const NewWidget();
   }
 }
 

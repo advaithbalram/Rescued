@@ -6,18 +6,18 @@ String _appTheme = "primary";
 /// Helper class for managing themes and colors.
 class ThemeHelper {
   // A map of custom color themes supported by the app
-  Map<String, PrimaryColors> _supportedCustomColor = {
+  final Map<String, PrimaryColors> _supportedCustomColor = {
     'primary': PrimaryColors()
   };
 
 // A map of color schemes supported by the app
-  Map<String, ColorScheme> _supportedColorScheme = {
+  final Map<String, ColorScheme> _supportedColorScheme = {
     'primary': ColorSchemes.primaryColorScheme
   };
 
-  /// Changes the app theme to [_newTheme].
-  void changeTheme(String _newTheme) {
-    _appTheme = _newTheme;
+  /// Changes the app theme to [newTheme].
+  void changeTheme(String newTheme) {
+    _appTheme = newTheme;
   }
 
   /// Returns the primary colors for the current theme.
@@ -136,7 +136,7 @@ class TextThemes {
 
 /// Class containing the supported color schemes.
 class ColorSchemes {
-  static final primaryColorScheme = ColorScheme.light(
+  static const primaryColorScheme = ColorScheme.light(
     // Primary colors
     primary: Color(0XFFFF0808),
     primaryContainer: Color(0X4FD9D9D9),
@@ -154,23 +154,23 @@ class ColorSchemes {
 /// Class containing custom colors for a primary theme.
 class PrimaryColors {
   // Black
-  Color get black900 => Color(0XFF000000);
-  Color get black90001 => Color(0XFF110F0E);
+  Color get black900 => const Color(0XFF000000);
+  Color get black90001 => const Color(0XFF110F0E);
 
   // Gray
-  Color get gray400 => Color(0XFFC4C4C4);
-  Color get gray50 => Color(0XFFFDF6F6);
-  Color get gray500 => Color(0XFF979797);
-  Color get gray5001 => Color(0XFFFFFBFB);
+  Color get gray400 => const Color(0XFFC4C4C4);
+  Color get gray50 => const Color(0XFFFDF6F6);
+  Color get gray500 => const Color(0XFF979797);
+  Color get gray5001 => const Color(0XFFFFFBFB);
 
   // Green
-  Color get greenA700 => Color(0XFF00EE34);
+  Color get greenA700 => const Color(0XFF00EE34);
 
   // Pink
-  Color get pink80087 => Color(0X879C4F4F);
+  Color get pink80087 => const Color(0X879C4F4F);
 
   // Red
-  Color get red600 => Color(0XFFEC3030);
+  Color get red600 => const Color(0XFFEC3030);
 }
 
 PrimaryColors get appTheme => ThemeHelper().themeColor();

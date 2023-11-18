@@ -48,7 +48,7 @@ class AndroidLargeSevenScreen extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               _buildBloodDonationCamp(context),
-                              Spacer(),
+                              const Spacer(),
                               CustomElevatedButton(
                                 width: 171.h,
                                 text: "NEW REQUEST".toUpperCase(),
@@ -208,14 +208,14 @@ class AndroidLargeSevenScreen extends StatelessWidget {
               "ALERTS".toUpperCase(),
               style: theme.textTheme.titleSmall,
             ),
-            Spacer(
+            const Spacer(
               flex: 62,
             ),
             Text(
               "SENT".toUpperCase(),
               style: theme.textTheme.titleSmall,
             ),
-            Spacer(
+            const Spacer(
               flex: 37,
             ),
             Text(

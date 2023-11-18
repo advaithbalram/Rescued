@@ -53,7 +53,7 @@ class FrameThreeScreen extends StatelessWidget {
                                                       .headlineLargeRobotoBlack900)),
                                           SizedBox(height: 96.v),
                                           _buildGridFrameThree(context),
-                                          Spacer(),
+                                          const Spacer(),
                                           CustomElevatedButton(
                                               width: 201.h,
                                               text:
@@ -92,10 +92,10 @@ class FrameThreeScreen extends StatelessWidget {
             crossAxisCount: 2,
             mainAxisSpacing: 29.h,
             crossAxisSpacing: 29.h),
-        physics: NeverScrollableScrollPhysics(),
+        physics: const NeverScrollableScrollPhysics(),
         itemCount: 4,
         itemBuilder: (context, index) {
-          return GridframethreeItemWidget();
+          return const GridframethreeItemWidget();
         });
   }
 

@@ -62,7 +62,7 @@ class AndroidLargeOneScreen extends StatelessWidget {
           Navigator.push(
               context,
               MaterialPageRoute(
-                  builder: ((context) => AndroidLargeFourScreen())));
+                  builder: ((context) => const AndroidLargeFourScreen())));
         },
         imagePath: ImageConstant.imgMenu,
         margin: EdgeInsets.only(
@@ -172,7 +172,7 @@ class AndroidLargeOneScreen extends StatelessWidget {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: ((context) => AndroidLargeThreeScreen())));
+                            builder: ((context) => const AndroidLargeThreeScreen())));
                   }),
                   child: Text.rich(TextSpan(children: [
                     TextSpan(
@@ -185,7 +185,7 @@ class AndroidLargeOneScreen extends StatelessWidget {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: ((context) => AndroidLargeThreeScreen())));
+                            builder: ((context) => const AndroidLargeThreeScreen())));
                   }),
                   child: Text.rich(TextSpan(children: [
                     TextSpan(
@@ -231,14 +231,14 @@ class AndroidLargeOneScreen extends StatelessWidget {
                 style: theme.textTheme.titleSmall,
               ),
             ),
-            Spacer(
+            const Spacer(
               flex: 65,
             ),
             Text(
               "UPDATE".toUpperCase(),
               style: theme.textTheme.titleSmall,
             ),
-            Spacer(
+            const Spacer(
               flex: 34,
             ),
             Text(

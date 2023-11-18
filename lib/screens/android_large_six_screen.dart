@@ -47,7 +47,7 @@ class AndroidLargeSixScreen extends StatelessWidget {
                             mainAxisSize: MainAxisSize.min,
                             children: [
                               _buildImageTopA(context),
-                              Spacer(),
+                              const Spacer(),
                               CustomElevatedButton(
                                 width: 171.h,
                                 text: "NEW REQUEST".toUpperCase(),
@@ -204,14 +204,14 @@ class AndroidLargeSixScreen extends StatelessWidget {
                 style: theme.textTheme.titleSmall,
               ),
             ),
-            Spacer(
+            const Spacer(
               flex: 63,
             ),
             Text(
               "SENT".toUpperCase(),
               style: theme.textTheme.titleSmall,
             ),
-            Spacer(
+            const Spacer(
               flex: 36,
             ),
             Text(

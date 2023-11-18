@@ -61,7 +61,7 @@ class FrameTwoScreen extends StatelessWidget {
                                                                   .toUpperCase(),
                                                               style: CustomTextStyles
                                                                   .headlineLargeRobotoBlack900))),
-                                                  Spacer(flex: 39),
+                                                  const Spacer(flex: 39),
                                                   SizedBox(
                                                       width: 286.h,
                                                       child: Text(
@@ -71,7 +71,7 @@ class FrameTwoScreen extends StatelessWidget {
                                                               .ellipsis,
                                                           style: CustomTextStyles
                                                               .titleLargeRobotoBlack900_1)),
-                                                  Spacer(flex: 60),
+                                                  const Spacer(flex: 60),
                                                   CustomElevatedButton(
                                                       text: "SENT REQUEST"
                                                           .toUpperCase(),

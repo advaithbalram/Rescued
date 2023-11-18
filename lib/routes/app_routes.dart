@@ -56,23 +56,23 @@ class AppRoutes {
   static const String appNavigationScreen = '/app_navigation_screen';
 
   static Map<String, WidgetBuilder> routes = {
-    loginPageTwoScreen: (context) => LoginPageTwoScreen(),
+    loginPageTwoScreen: (context) => const LoginPageTwoScreen(),
     loginPageScreen: (context) => LoginPageScreen(),
-    androidLargeSixScreen: (context) => AndroidLargeSixScreen(),
-    androidLargeSevenScreen: (context) => AndroidLargeSevenScreen(),
-    frameTwoScreen: (context) => FrameTwoScreen(),
-    androidLargeFiveScreen: (context) => AndroidLargeFiveScreen(),
+    androidLargeSixScreen: (context) => const AndroidLargeSixScreen(),
+    androidLargeSevenScreen: (context) => const AndroidLargeSevenScreen(),
+    frameTwoScreen: (context) => const FrameTwoScreen(),
+    androidLargeFiveScreen: (context) => const AndroidLargeFiveScreen(),
     loginPageFourScreen: (context) => LoginPageFourScreen(),
     loginPageThreeScreen: (context) => LoginPageThreeScreen(),
-    frameThreeScreen: (context) => FrameThreeScreen(),
-    frameFourScreen: (context) => FrameFourScreen(),
+    frameThreeScreen: (context) => const FrameThreeScreen(),
+    frameFourScreen: (context) => const FrameFourScreen(),
     loginPageFiveScreen: (context) => LoginPageFiveScreen(),
     loginPageSixScreen: (context) => LoginPageSixScreen(),
     loginPageOneScreen: (context) => LoginPageOneScreen(),
-    androidLargeOneScreen: (context) => AndroidLargeOneScreen(),
-    androidLargeThreeScreen: (context) => AndroidLargeThreeScreen(),
-    androidLargeFourScreen: (context) => AndroidLargeFourScreen(),
+    androidLargeOneScreen: (context) => const AndroidLargeOneScreen(),
+    androidLargeThreeScreen: (context) => const AndroidLargeThreeScreen(),
+    androidLargeFourScreen: (context) => const AndroidLargeFourScreen(),
     loginPageHospitalScreen: (context) => LoginPageHospitalScreen(),
-    appNavigationScreen: (context) => AppNavigationScreen()
+    appNavigationScreen: (context) => const AppNavigationScreen()
   };
 }

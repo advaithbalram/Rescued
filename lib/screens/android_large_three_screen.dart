@@ -61,7 +61,7 @@ class AndroidLargeThreeScreen extends StatelessWidget {
           Navigator.push(
               context,
               MaterialPageRoute(
-                  builder: ((context) => AndroidLargeFourScreen())));
+                  builder: ((context) => const AndroidLargeFourScreen())));
         },
         imagePath: ImageConstant.imgMenu,
         margin: EdgeInsets.only(
@@ -193,14 +193,14 @@ class AndroidLargeThreeScreen extends StatelessWidget {
               "ALERTS".toUpperCase(),
               style: theme.textTheme.titleSmall,
             ),
-            Spacer(
+            const Spacer(
               flex: 64,
             ),
             Text(
               "UPDATE".toUpperCase(),
               style: theme.textTheme.titleSmall,
             ),
-            Spacer(
+            const Spacer(
               flex: 35,
             ),
             Text(
